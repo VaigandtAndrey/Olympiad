@@ -1,19 +1,20 @@
 package com.epam.vaigandt.entity;
 
 
-public abstract class SportType extends Olympiad {
-    public long id;
-    public String name;
-    public int amountMedals;
+public abstract class Discipline extends Olympiad {
+    long id;
+    String name;
+    int amountMedals;
 
-    protected SportType(long id, String name, int amountMedals) {
-        id = id;
-        name = name;
+
+    public Discipline(long id, String name, int amountMedals) {
+        this.id = id;
+        this.name = name;
         this.amountMedals = amountMedals;
     }
 
+    public Discipline() {
 
-    protected SportType() {
     }
 
     public long getId() {
@@ -39,4 +40,15 @@ public abstract class SportType extends Olympiad {
     public void setAmountMedals(int amountMedals) {
         this.amountMedals = amountMedals;
     }
+
+    @Override
+    public String toString() {
+        return "Discipline{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", amountMedals=" + amountMedals +
+                '}';
+    }
+
+
 }
